@@ -67,7 +67,9 @@ const record = [
 superbowlWin(record);
 
 function superbowlWin(allRecord) {
-    let records = allRecord.find(element => element.result === "W");
+    let records = allRecord.find(function(element){
+      return element.result === "W";
+    })
     // return records.year;
     if (typeof records === 'object') {
                 return records.year;
